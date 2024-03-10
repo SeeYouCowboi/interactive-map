@@ -20,8 +20,10 @@ export default class World extends EventEmitter {
     this.resources = this.experience.resources
 
     this.resources.on('ready', () => {
-      this.environment = new Environment()
-      this.plateforme10 = new Plateforme10()
+      // 设置背景色
+      this.environment = new Environment() 
+      // 加载模型和纹理
+      this.plateforme10 = new Plateforme10() 
       this.interests = new Interests()
       // this.controls = new Controls()
       this.emit('worldready')
