@@ -37,11 +37,11 @@ export default class Bike {
       map: textureHos,
     });
 
-    const textureRoadLight = this.resources.items.textureRoadLight;
-    textureRoadLight.flipY = false;
-    textureRoadLight.encoding = THREE.sRGBEncoding;
-    const materialRoadLight = new THREE.MeshBasicMaterial({
-      map: textureRoadLight,
+    const textureRoadLights = this.resources.items.textureRoadLights;
+    textureRoadLights.flipY = false;
+    textureRoadLights.encoding = THREE.sRGBEncoding;
+    const materialRoadLights = new THREE.MeshBasicMaterial({
+      map: textureRoadLights,
     });
 
     const textureTable = this.resources.items.textureTable;
@@ -55,35 +55,43 @@ export default class Bike {
     textureChairs.flipY = false;
     textureChairs.encoding = THREE.sRGBEncoding;
     const materialChairs = new THREE.MeshBasicMaterial({
-      color: 0xffffe5,
+      map: textureChairs,
     });
 
-    // const textureBuildings = this.resources.items.textureBuildings;
-    // textureBuildings.flipY = false;
-    // textureBuildings.encoding = THREE.sRGBEncoding;
-    // const materialBuildings = new THREE.MeshBasicMaterial({
-    //   map: textureBuildings,
-    // });
+    const textureComputers = this.resources.items.textureComputers;
+    textureComputers.flipY = false;
+    textureComputers.encoding = THREE.sRGBEncoding;
+    const materialComputers = new THREE.MeshBasicMaterial({
+      map: textureComputers,
+    });
 
-    // const textureMdba = this.resources.items.textureMdba;
-    // textureMdba.flipY = false;
-    // textureMdba.encoding = THREE.sRGBEncoding;
-    // const materialMdba = new THREE.MeshBasicMaterial({ map: textureMdba });
+    const textureShabbyDesk = this.resources.items.textureShabbyDesk;
+    textureShabbyDesk.flipY = false;
+    textureShabbyDesk.encoding = THREE.sRGBEncoding;
+    const materialShabbyDesk = new THREE.MeshBasicMaterial({
+      map: textureShabbyDesk,
+    });
 
-    // const textureMudacDetails = this.resources.items.textureMudacDetails;
-    // textureMudacDetails.flipY = false;
-    // textureMudacDetails.encoding = THREE.sRGBEncoding;
-    // const materialMudacDetails = new THREE.MeshBasicMaterial({
-    //   map: textureMudacDetails,
-    // });
+    const textureShelf = this.resources.items.textureShelf;
+    textureShelf.flipY = false;
+    textureShelf.encoding = THREE.sRGBEncoding;
+    const materialShelf = new THREE.MeshBasicMaterial({
+      map: textureShelf,
+    });
 
-    // const textureTerrain = this.resources.items.textureTerrain;
-    // textureTerrain.flipY = false;
-    // textureTerrain.encoding = THREE.sRGBEncoding;
-    // const materialTerrain = new THREE.MeshBasicMaterial({
-    //   map: textureTerrain,
-    // });
+    const textureToolsChest = this.resources.items.textureToolsChest;
+    textureToolsChest.flipY = false;
+    textureToolsChest.encoding = THREE.sRGBEncoding;
+    const materialToolsChest = new THREE.MeshBasicMaterial({
+      map: textureToolsChest,
+    });
 
+    const textureVetDesk = this.resources.items.textureVetDesk;
+    textureVetDesk.flipY = false;
+    textureVetDesk.encoding = THREE.sRGBEncoding;
+    const materialVetDesk = new THREE.MeshBasicMaterial({
+      map: textureVetDesk,
+    });
     // const lightPanelTexture = new THREE.MeshBasicMaterial({ color: 0xffffe5 });
 
     this.actualHosModel.traverse((child) => {
@@ -91,10 +99,9 @@ export default class Bike {
         child.material = materialHos;
       }
 
-      if (child.name.match(/^roadLight.*$/)) {
-        child.material = materialRoadLight;
+      if (child.name.match(/^roadLights.*$/)) {
+        child.material = materialRoadLights;
       }
-
       if (child.name.match(/^consult.*$/)) {
         child.material = materialTable;
       }
@@ -103,25 +110,25 @@ export default class Bike {
         child.material = materialChairs;
       }
 
-      // if (child.name.match(/^mdba.*$/)) {
-      //   child.material = materialMdba;
-      // }
+      if (child.name.match(/^computers.*$/)) {
+        child.material = materialComputers;
+      }
 
-      // if (child.name.match(/^mudac.*$/)) {
-      //   child.material = materialMudacDetails;
-      // }
+      if (child.name.match(/^shabbyDesk.*$/)) {
+        child.material = materialShabbyDesk;
+      }
 
-      // if (child.name.match(/^terrain.*$/)) {
-      //   child.material = materialTerrain;
-      // }
+      if (child.name.match(/^shelf.*$/)) {
+        child.material = materialShelf;
+      }
 
-      // if (child.name.match(/^buildings.*$/)) {
-      //   child.material = materialBuildings;
-      // }
+      if (child.name.match(/^toolsChest.*$/)) {
+        child.material = materialToolsChest;
+      }
 
-      // if (child.name.match(/^lightPanel.*$/)) {
-      //   child.material = lightPanelTexture;
-      // }
+      if (child.name.match(/^vetDesk.*$/)) {
+        child.material = materialVetDesk;
+      }
     });
 
     this.scene.add(this.actualHosModel);

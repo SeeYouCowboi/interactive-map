@@ -10,9 +10,9 @@ export default [
     path: "/textures/hosTex8k-baked.jpg",
   },
   {
-    name: "textureRoadLight",
+    name: "textureRoadLights",
     type: "texture",
-    path: "/textures/roadLightTex-baked.jpg",
+    path: "/textures/roadLightsTex-baked.jpg",
   },
   {
     name: "textureTable",
@@ -24,29 +24,29 @@ export default [
     type: "texture",
     path: "/textures/chairsTex-baked.jpg",
   },
-  // {
-  //   name: "plateforme10",
-  //   type: "glbModel",
-  //   path: "/models/plateforme10.glb",
-  // },
-  // {
-  //   name: "textureBuildings",
-  //   type: "texture",
-  //   path: "/textures/buildings-baked.jpg",
-  // },
-  // {
-  //   name: "textureMdba",
-  //   type: "texture",
-  //   path: "/textures/mdba-baked.jpg",
-  // },
-  // {
-  //   name: "textureMudacDetails",
-  //   type: "texture",
-  //   path: "/textures/mudacDetails-baked.jpg",
-  // },
-  // {
-  //   name: "textureTerrain",
-  //   type: "texture",
-  //   path: "/textures/terrain-baked.jpg",
-  // },
+  {
+    name: "textureComputers",
+    type: "texture",
+    path: "/textures/computersTex-baked.jpg",
+  },
+  {
+    name: "textureShabbyDesk",
+    type: "texture",
+    path: "/textures/shabbyDeskTex-baked.jpg",
+  },
+  {
+    name: "textureShelf",
+    type: "texture",
+    path: "/textures/shelfTex-baked.jpg",
+  },
+  {
+    name: "textureToolsChest",
+    type: "texture",
+    path: "/textures/toolsChestTex-baked.jpg",
+  },
+  {
+    name: "textureVetDesk",
+    type: "texture",
+    path: "/textures/vetDeskTex-baked.jpg",
+  },
 ];
