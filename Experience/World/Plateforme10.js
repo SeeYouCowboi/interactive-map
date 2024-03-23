@@ -129,10 +129,6 @@ export default class Bike {
       if (child.name.match(/^vetDesk.*$/)) {
         child.material = materialVetDesk;
       }
-
-      if (child.name.match(/^Position.*$/)) {
-        console.log(child.name, child.position);
-      }
     });
 
     this.scene.add(this.actualHosModel);
